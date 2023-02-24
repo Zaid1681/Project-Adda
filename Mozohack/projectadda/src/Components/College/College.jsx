@@ -2,18 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import './College.css'
+// import './College.css'
 import bg from '../../assets/bg.jpg'
 import it from '../../assets/it.jpg'
 import mech from '../../assets/mech.jpg'
 
-
-
-
 export default function College() {
   return (
     <div className='college'>
-        <Link to='/college'>
+        <Link to='/college'>  </Link> 
           <h1>College</h1>
 
           <div className='college-cards'>
@@ -91,7 +88,7 @@ export default function College() {
           </div>
           
 
-        </Link>
+      
     </div>
   )
 }
