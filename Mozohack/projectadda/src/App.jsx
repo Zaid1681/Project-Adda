@@ -8,6 +8,7 @@ import {
   Route
 } from 'react-router-dom'
 import College from './Components/College/College';
+import Department from './Components/Department/Department';
 
 function App() {
  
@@ -21,6 +22,7 @@ function App() {
           <Route path='/' element= { <Landing /> } />
           {/* <Route path='/' element= { <Dashboard /> } /> */}
           <Route path='/college' element= { <College /> } />
+          <Route path='/department' element= { <Department /> } />
           {/* <Route path='/login' element= { <Login /> } /> */}
         </Routes>
       </Router>

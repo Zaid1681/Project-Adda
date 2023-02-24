@@ -4,10 +4,12 @@
 }
 
 
-.row{
-    display: flex;
-    justify-content: space-around;
-}
+    .row{
+        margin: 0 auto !important;
+    }
+    .col{
+        margin: 0 auto !important;
+    }
 
 .college-cards{
     margin: 0 auto;

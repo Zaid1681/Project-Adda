@@ -12,8 +12,8 @@ function Navbar_PA() {
             <Nav.Link href="/">Home</Nav.Link>
           </Nav>
           <Nav className="justify-content-end">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#">For People</Nav.Link>
+            <Nav.Link href="#">Like You</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
