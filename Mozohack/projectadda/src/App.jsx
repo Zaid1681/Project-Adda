@@ -9,8 +9,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
-import College from './Components/College/College';
-import Department from './Components/Department/Department';
+
 
 function App() {
  

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-// import './College.css'
+import './College.css'
 import bg from '../../assets/bg.jpg'
 import it from '../../assets/it.jpg'
 import mech from '../../assets/mech.jpg'
