@@ -11,9 +11,13 @@ import './Department.css'
 export default function Department() {
     return (
         <div>
+            <div className="department-content container mt-4">
+                <h1>Department Name</h1>
+            </div>
+
             <Link to='/department'></Link>
             <div>
-                <div className="carousel ">
+                <div className="carousel mt-5 mb-4">
                     <Carousel>
                         <Carousel.Item>
                             <img
@@ -61,9 +65,12 @@ export default function Department() {
                 
             </div>
 
+            <div className="department-content container mt-5">
+                <h2>Here are the Projects:</h2>
+            </div>
 
             <div>
-                <div className='container-fluid'>
+                <div className='container   '>
                         <div className="row">
                             <div className="col-md-4">
                                 <div class="card card-1">
