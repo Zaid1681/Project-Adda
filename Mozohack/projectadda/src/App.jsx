@@ -2,6 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Navbar_PA from './Components/Navbar/Navbar_PA'
 import Landing from './Components/LandingPage/Landing';
+import College from './Components/College/College';
+import Department from './Components/Department/Department';
 import { 
   BrowserRouter as Router,
   Routes,
@@ -24,6 +26,7 @@ function App() {
           <Route path='/college' element= { <College /> } />
           <Route path='/department' element= { <Department /> } />
           {/* <Route path='/login' element= { <Login /> } /> */}
+          <Route path='/college/department' element= { <Department /> } />
         </Routes>
       </Router>
     </div>
