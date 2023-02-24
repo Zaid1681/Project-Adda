@@ -13,7 +13,7 @@ export default function Department() {
         <div>
             <Link to='/department'></Link>
             <div>
-                <div className="carousel">
+                <div className="carousel ">
                     <Carousel>
                         <Carousel.Item>
                             <img
@@ -55,47 +55,54 @@ export default function Department() {
                     </Carousel>
                 </div>
 
+
+
+
                 
-                <div className='container'>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card card-1">
-                                <h3>Project 1</h3>
-                                <h6>Build by - Adi</h6>
-                                <Link to='/college'><p>More Info</p></Link>
+            </div>
+
+
+            <div>
+                <div className='container-fluid'>
+                        <div className="row">
+                            <div className="col-md-4">
+                                <div class="card card-1">
+                                    <h3>Project 1</h3>
+                                    <h6>Build by - Adi</h6>
+                                    <Link to='/college'><p>More Info</p></Link>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-2">
-                                <h3>Project 2</h3>
-                                <h6>Build by - Anish </h6>
-                                <Link to='/college'><p>More Info</p></Link>
+                            <div class="col-md-4">
+                                <div class="card card-2">
+                                    <h3>Project 2</h3>
+                                    <h6>Build by - Anish </h6>
+                                    <Link to='/college'><p>More Info</p></Link>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-3">
-                                <h3>Project 3</h3>
-                                <h6>Build by - Zaid Khan </h6>
+                            <div class="col-md-4">
+                                <div class="card card-3">
+                                    <h3>Project 3</h3>
+                                    <h6>Build by - Zaid Khan </h6>
 
-                                <Link to='/college'><p>More Info</p></Link>
+                                    <Link to='/college'><p>More Info</p></Link>
 
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card card-3">
-                                <h3>Project 4</h3>
-                                <h6>Build by - Abhishek Jani </h6>
-
-                                <Link to='/college'><p>More Info</p></Link>
-
+                                </div>
                             </div>
 
-                        </div>
+                            <div class="col-md-4">
+                                <div class="card card-3">
+                                    <h3>Project 4</h3>
+                                    <h6>Build by - Abhishek Jani </h6>
 
+                                    <Link to='/college'><p>More Info</p></Link>
+
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }
