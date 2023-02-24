@@ -6,6 +6,8 @@ import i1 from '../../assets/i1.jpg'
 import mech from '../../assets/mech.jpg'
 import { Link } from 'react-router-dom'
 import './Department.css'
+
+
 export default function Department() {
     return (
         <div>
@@ -15,7 +17,7 @@ export default function Department() {
                     <Carousel>
                         <Carousel.Item>
                             <img
-                                className="d-block w-100"
+                                className="d-block"
                                 src={i1}
                                 alt="First slide"
                             />
@@ -26,7 +28,7 @@ export default function Department() {
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
-                                className="d-block w-100"
+                                className="d-block"
                                 src={mech}
                                 alt="Second slide"
                             />
@@ -38,7 +40,7 @@ export default function Department() {
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
-                                className="d-block w-100"
+                                className="d-block"
                                 src={bg}
                                 alt="Third slide"
                             />
@@ -52,6 +54,8 @@ export default function Department() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
+
+                
                 <div className='container'>
                     <div class="row">
                         <div class="col-md-4">
