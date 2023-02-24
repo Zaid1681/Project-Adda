@@ -1,16 +1,29 @@
-import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Navbar_PA from './Components/Navbar/Navbar_PA'
 import Landing from './Components/LandingPage/Landing';
+import { 
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
+import College from './Components/College/College';
 
 function App() {
  
 
   return (
     <div>
+      <Router>
       <Navbar_PA />
-      <Landing />
+      <Routes>
+          
+          <Route path='/' element= { <Landing /> } />
+          {/* <Route path='/' element= { <Dashboard /> } /> */}
+          <Route path='/college' element= { <College /> } />
+          {/* <Route path='/login' element= { <Login /> } /> */}
+        </Routes>
+      </Router>
     </div>
   )
 }
