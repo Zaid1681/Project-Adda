@@ -9,6 +9,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
+import Info from './Components/Info/Info';
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           {/* <Route path='/' element= { <Dashboard /> } /> */}
           <Route path='/college' element= { <College /> } />
           <Route path='/department' element= { <Department /> } />
-          {/* <Route path='/login' element= { <Login /> } /> */}
+          <Route path='/Info' element= { <Info /> } />
           {/* <Route path='/college/department' element= { <Department /> } /> */}
         </Routes>
       </Router>

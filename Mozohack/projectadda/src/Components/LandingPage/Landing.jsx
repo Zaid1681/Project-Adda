@@ -25,11 +25,11 @@ function Landing() {
                       <Dropdown.Menu>
                           <Dropdown.Item>
                             <Link to='/college'>
-                                College 1
+                                VCET
                             </Link>
                           </Dropdown.Item>
-                          <Dropdown.Item href="#/action-1">College 2</Dropdown.Item>
-                          <Dropdown.Item href="#/action-1">College 3</Dropdown.Item>
+                          <Dropdown.Item href="/college">Thakur</Dropdown.Item>
+                          <Dropdown.Item href="/college">UCOE</Dropdown.Item>
                         
                       </Dropdown.Menu>
                   </Dropdown>
