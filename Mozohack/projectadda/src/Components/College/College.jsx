@@ -6,90 +6,61 @@ import './College.css'
 import bg from '../../assets/bg.jpg'
 import it from '../../assets/it.jpg'
 import mech from '../../assets/mech.jpg'
+import { useState ,useEffect} from 'react'
+import axios from 'axios'
 
+
+// {college_id}
 export default function College() {
+
+  const [departments, setDepartments] = useState()
+
+  const sendRequest = async () => {
+    const res = await axios.get("http://localhost:8000/api/department").catch((err) => {console.log(err)});
+   
+    //const res = await axios.get(`http://localhost:8000/api/department/college/${college_id}`).catch((err) => {console.log(err)});
+    const data = await res.data;
+    return data
+  }
+
+  useEffect(() => {
+    sendRequest().then(data => setDepartments(data.departments))
+
+  }, [])
+
+  //console.log("Here", college_id);
+
+
   return (
     <div className='college mt-4'>
           {/* <Link to='/college'></Link>   */}
-          <h1>College</h1>
+          <h1>College Name</h1>
 
           <div className='college-cards'>
-            <div className="row g-5">
-              <div className="col-12 col-md-4"  align="center">
-                <Card style={{ width: '20rem' }}>
-                  <Card.Img variant="top" src={bg} />
-                  <Card.Body>
-                    <Card.Title>Computer Science</Card.Title>
-                    <Link to='/department'>
-                      <Button variant="primary">Go somewhere</Button>
-                    </Link>
-                  </Card.Body>
-                </Card>
-              </div>
-              <div className="col-12 col-md-4"  align="center">
-                <Card style={{ width: '20rem' }}>
-                  <Card.Img variant="top" src={it} />
-                  <Card.Body>
-                    <Card.Title>Information Technology</Card.Title>
+        <div className="row g-5">
 
-                    <Link to='/department'>
-                      <Button variant="primary">Go somewhere</Button>
-                    </Link>
-                  </Card.Body>
-                </Card>
-              </div>
-              <div className="col-12 col-md-4"  align="center">
-                <Card style={{ width: '20rem' }}>
-                  <Card.Img variant="top" src={mech} />
-                  <Card.Body>
-                    <Card.Title>Mechanical</Card.Title>
 
-                    <Link to='/department'>
-                      <Button variant="primary">Go somewhere</Button>
-                    </Link>
-                  </Card.Body>
-                </Card>
-              </div>
+
+
+          {departments && departments.map((department, index) => (
+            <div className="col-12 col-md-4" align="center">
+              <Card style={{ width: '20rem' }} key={index} >
+                <Card.Img variant="top" src={bg} />
+                <Card.Body>
+                  <Card.Title>{department.name}</Card.Title>
+                  <Link to='/department'>
+                    <Button variant="primary">Go somewhere</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+
             </div>
+          ))}
 
-            <div className="row g-5">
-              <div className="col-12 col-md-4 "  align="center">
-                <Card style={{ width: '20rem' }}>
-                  <Card.Img variant="top" src={bg} />
-                  <Card.Body>
-                    <Card.Title>Computer Science</Card.Title>
 
-                    <Link to='/department'>
-                      <Button variant="primary">Go somewhere</Button>
-                    </Link>
-                  </Card.Body>
-                </Card>
-              </div>
-              <div className="col-12 col-md-4"  align="center">
-                <Card style={{ width: '20rem' }}>
-                  <Card.Img variant="top" src={it} />
-                  <Card.Body>
-                    <Card.Title>Information Technology</Card.Title>
+        </div>
 
-                    <Link to='/department'>
-                      <Button variant="primary">Go somewhere</Button>
-                    </Link>
-                  </Card.Body>
-                </Card>
-              </div>
-              <div className="col-12 col-md-4"  align="center">
-                <Card style={{ width: '20rem' }}>
-                  <Card.Img variant="top" src={mech} />
-                  <Card.Body>
-                    <Card.Title>Mechanical</Card.Title>
-
-                    <Link to='/department'>
-                      <Button variant="primary">Go somewhere</Button>
-                    </Link>
-                  </Card.Body>
-                </Card>
-              </div>
-            </div>
+      
             
            
             

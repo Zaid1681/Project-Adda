@@ -4,10 +4,31 @@ import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Link } from 'react-router-dom'
 import College from '../College/College';
+import { useState ,useEffect} from 'react'
+import axios from 'axios'
 
 
 
 function Landing() {
+
+  const [colleges, setColleges] = useState()
+
+  const sendRequest = async () => {
+    const res = await axios.get("http://localhost:8000/api/college").catch((err) => {console.log(err)});
+    const data = await res.data;
+    return data
+  }
+
+  useEffect(() => {
+    sendRequest().then(data => setColleges(data.colleges))
+
+  }, [])
+
+  
+  // const res = axios.get(`http://localhost:5000/api/college/user/${id}`).catch((err) => console.log(err))
+  // const data = res.data
+  // console.log(res.data);
+  
   return (
     <div className='landing-bg'>
         <div className="content">
@@ -18,18 +39,24 @@ function Landing() {
             </div> */}
             <div>
                   <Dropdown>
-                      <Dropdown.Toggle variant="success" id="dropdown-basic">
+                      <Dropdown.Toggle variant="dark" id="dropdown-basic" className='w-40'>
                           Search College
                       </Dropdown.Toggle>
 
-                      <Dropdown.Menu>
-                          <Dropdown.Item>
-                            <Link to='/college'>
-                                College 1
-                            </Link>
-                          </Dropdown.Item>
-                          <Dropdown.Item href="#/action-1">College 2</Dropdown.Item>
-                          <Dropdown.Item href="#/action-1">College 3</Dropdown.Item>
+                      <Dropdown.Menu className='w-40'>
+                          {colleges && colleges.map((college, index) => (
+                              <Dropdown.Item key={index} >
+                                <Link to='/college'>
+                                    {college.name}
+                                    {/* <College college_id={college._id} name={college.name}  /> */}
+                                    {/* {console.log(colleges.map((college, index) => ( console.log(college.departments) )))} */}
+                                    {console.log(colleges.name)}
+                                    
+                                </Link>
+                              </Dropdown.Item>
+                          ))}
+                          
+                          
                         
                       </Dropdown.Menu>
                   </Dropdown>
